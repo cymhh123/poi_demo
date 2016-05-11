@@ -1,0 +1,78 @@
+package org.konghao.poi.test;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.junit.Test;
+import org.konghao.poi.util.ExcelTemplate;
+
+public class TestPoi {
+
+	@Test
+	public void test01() {
+		ExcelTemplate et = ExcelTemplate.getInstance()
+					.readTemplateByClasspath("/excel/user.xls");
+		et.createNewRow();
+		et.createCell("1111111");
+		et.createCell("aaaaaaaaaaaa");
+		et.createCell("a1");
+		et.createCell("a2a2");
+		et.createNewRow();
+		et.createCell("222222");
+		et.createCell("bbbbb");
+		et.createCell("b");
+		et.createCell("dbbb");
+		et.createNewRow();
+		et.createCell("3333333");
+		et.createCell("cccccc");
+		et.createCell("a1");
+		et.createCell(12333);
+		et.createNewRow();
+		et.createCell("4444444");
+		et.createCell("ddddd");
+		et.createCell("a1");
+		et.createCell("a2a2");
+		et.createNewRow();
+		et.createCell("555555");
+		et.createCell("eeeeee");
+		et.createCell("a1");
+		et.createCell(112);
+		et.createNewRow();
+		et.createCell("555555");
+		et.createCell("eeeeee");
+		et.createCell("a1");
+		et.createCell("a2a2");
+		et.createNewRow();
+		et.createCell("555555");
+		et.createCell("eeeeee");
+		et.createCell("a1");
+		et.createCell("a2a2");
+		et.createNewRow();
+		et.createCell("555555");
+		et.createCell("eeeeee");
+		et.createCell("a1");
+		et.createCell("a2a2");
+		et.createNewRow();
+		et.createCell("555555");
+		et.createCell("eeeeee");
+		et.createCell("a1");
+		et.createCell("a2a2");
+		et.createNewRow();
+		et.createCell("555555");
+		et.createCell("eeeeee");
+		et.createCell("a1");
+		et.createCell("a2a2");
+		et.createNewRow();
+		et.createCell("555555");
+		et.createCell("eeeeee");
+		et.createCell("a1");
+		et.createCell("a2a2");
+		Map<String,String> datas = new HashMap<String,String>();
+		datas.put("title","测试用户信息");
+		datas.put("date","2012-06-02 12:33");
+		datas.put("dep","昭通师专财务处");
+		et.replaceFinalData(datas);
+		et.insertSer();
+		et.writeToFile("d:/test/poi/test01.xls");
+	}
+}
